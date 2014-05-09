@@ -19,6 +19,9 @@ data$Time <- strptime(paste(data$Date, data$Time),
 # Defaults for width and height are 480px
 png(filename="plot1.png")
 
+# Setup transparent background
+par(bg=NA)
+
 # Plot the histogram
 hist(data$Global_active_power,
      main="Global Active Power",
