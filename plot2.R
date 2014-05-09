@@ -19,6 +19,9 @@ data$Time <- strptime(paste(data$Date, data$Time),
 # Defaults for width and height are 480px
 png(filename="plot2.png")
 
+# Setup transparent background
+par(bg=NA)
+
 # Plot the graphic
 plot(data$Time, data$Global_active_power,
      ylab="Global Active Power (kilowatts)",

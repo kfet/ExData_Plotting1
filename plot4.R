@@ -22,6 +22,9 @@ png(filename="plot4.png")
 # Setup 2 rows and 2 columns of diagrams
 par(mfrow=c(2, 2))
 
+# Setup transparent background
+par(bg=NA)
+
 ############ plot 1
 
 plot(data$Time, data$Global_active_power,

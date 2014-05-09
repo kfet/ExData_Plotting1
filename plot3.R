@@ -19,6 +19,9 @@ data$Time <- strptime(paste(data$Date, data$Time),
 # Defaults for width and height are 480px
 png(filename="plot3.png")
 
+# Setup transparent background
+par(bg=NA)
+
 # Plot the frame
 plot(data$Time, data$Sub_metering_1, type="n",
      ylab="Energy sub metering",
@@ -35,7 +38,8 @@ legend("topright",
                 "Sub_metering_2",
                 "Sub_metering_3"),
        col=c("black", "red", "blue"),
-       lty=1)
+       lty=1,
+       bg="transparent")
 
 # Close the device
 dev.off()
